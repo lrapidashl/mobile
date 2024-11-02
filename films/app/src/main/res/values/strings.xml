@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">films</string>
+    <string name="films">Фильмы</string>
+    <string name="long_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus eu massa at lobortis. Proin pharetra imperdiet facilisis. Phasellus non bibendum purus, vel porttitor nunc. Integer rutrum libero tellus. Pellentesque vehicula pretium nulla. Cras mollis nulla id hendrerit vestibulum. Sed nisi felis, dictum at vulputate et, malesuada non arcu. Pellentesque nec luctus neque. Curabitur tincidunt ligula quam, quis bibendum eros ullamcorper in. Suspendisse justo nibh, pellentesque id laoreet non, cursus sit amet lectus. Proin maximus gravida tempus. Phasellus ultricies convallis enim. Nullam sit amet elit eleifend tellus posuere scelerisque sed eget nibh. Ut bibendum suscipit magna id tempor. Cras iaculis eget augue sed venenatis. Nullam aliquet erat ac varius faucibus. </string>
+</resources>

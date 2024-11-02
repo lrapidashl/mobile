@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">navigation</string>
+    <string name="first_name">First Name</string>
+    <string name="second_name">Second Name</string>
+    <string name="third_fragment">Third Fragment</string>
+    <string name="fifth_fragment_text">Lorem ipsum fifth…</string>
+    <string name="forth_fragment_text">Lorem ipsum forth…</string>
+    <string name="fifth_fragment">Fifth Fragment</string>
+    <string name="first_fragment">First Fragment</string>
+    <string name="forth_fragment">Forth Fragment</string>
+    <string name="second_fragment">Second Fragment</string>
+    <string name="fio_placeholder">Имя и Фамилия</string>
+    <string name="third_fragment_data_placeholder">Данные</string>
+</resources>
