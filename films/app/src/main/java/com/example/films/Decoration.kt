@@ -27,7 +27,7 @@ class Decoration(
         val topBottomOffset = 20.px()
         val innerOffset = 16.px()
 
-        if (position == 0 || position == 1 || position == Constants.COLUMN_COUNT) {
+        if (position == 0 || position == 1 || position == 2) {
             outRect.top = topBottomOffset
         } else {
             outRect.top = innerOffset / 2

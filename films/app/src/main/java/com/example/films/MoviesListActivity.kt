@@ -11,7 +11,7 @@ class MoviesListActivity : AppCompatActivity() {
 
     object Constants {
         const val COLUMN_COUNT = 3
-        const val MOVIES_COUNT = 21
+        const val MOVIES_COUNT = 20
     }
 
     private lateinit var binding: ActivityMoviesListBinding
