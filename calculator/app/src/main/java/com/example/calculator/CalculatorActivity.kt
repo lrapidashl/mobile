@@ -25,8 +25,10 @@ class CalculatorActivity : AppCompatActivity() {
 
         buttons.forEach { button ->
             button?.setOnClickListener { view ->
-                val buttonText = (view as? Button)?.text?.toString() ?: return@setOnClickListener
-                appendToExpression(buttonText)
+                if (view is Button) {
+                    val buttonText = view.text?.toString() ?: return@setOnClickListener
+                    appendToExpression(buttonText)
+                }
             }
         }
 
@@ -68,6 +70,10 @@ class CalculatorActivity : AppCompatActivity() {
             binding.expression.setTextColor(getColor(R.color.black))
             binding.result.setTextColor(getColor(R.color.black))
             binding.result.text = result.toString()
+        } catch (e: ArithmeticException) {
+            binding.expression.setTextColor(getColor(R.color.red))
+            binding.result.setTextColor(getColor(R.color.red))
+            binding.result.text = getString(R.string.zeroDivisionError)
         } catch (e: Exception) {
             binding.expression.setTextColor(getColor(R.color.red))
             binding.result.setTextColor(getColor(R.color.red))

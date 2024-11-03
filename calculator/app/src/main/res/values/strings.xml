@@ -21,6 +21,7 @@
     <string name="expression">Выражение</string>
     <string name="result">Результат</string>
     <string name="error">Ошибка</string>
+    <string name="zeroDivisionError">"Нельзя делить на 0"</string>
 
 
     <string name="madeby">Calculator by @laprovince</string>

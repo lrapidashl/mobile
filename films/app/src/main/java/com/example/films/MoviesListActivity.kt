@@ -9,6 +9,11 @@ import com.example.films.databinding.ActivityMoviesListBinding
 
 class MoviesListActivity : AppCompatActivity() {
 
+    object Constants {
+        const val COLUMN_COUNT = 3
+        const val MOVIES_COUNT = 21
+    }
+
     private lateinit var binding: ActivityMoviesListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,9 +21,9 @@ class MoviesListActivity : AppCompatActivity() {
         binding = ActivityMoviesListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val movies = generateFakeMovies(20)
+        val movies = generateFakeMovies(Constants.MOVIES_COUNT)
 
-        binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
+        binding.recyclerView.layoutManager = GridLayoutManager(this, Constants.COLUMN_COUNT)
         binding.recyclerView.addItemDecoration(Decoration(resources))
         binding.recyclerView.adapter = MoviesAdapter(movies) { movie ->
             val intent = Intent(this, MovieActivity::class.java)

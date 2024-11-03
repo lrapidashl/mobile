@@ -9,6 +9,11 @@ import com.example.navigation.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment(R.layout.fragment_first)
 {
+    private object Constants {
+        const val FIRST_NAME = "FIRST_NAME"
+        const val LAST_NAME = "LAST_NAME"
+    }
+
     private lateinit var binding: FragmentFirstBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
@@ -16,8 +21,8 @@ class FirstFragment : Fragment(R.layout.fragment_first)
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentFirstBinding.bind(view)
 
-        val firstNameArg = arguments?.getString("FIRST_NAME")
-        val lastNameArg = arguments?.getString("LAST_NAME")
+        val firstNameArg = arguments?.getString(Constants.FIRST_NAME)
+        val lastNameArg = arguments?.getString(Constants.LAST_NAME)
 
         if (firstNameArg != null && lastNameArg != null)
         {
@@ -30,8 +35,8 @@ class FirstFragment : Fragment(R.layout.fragment_first)
             val lastName:String = binding.lastName.text.toString()
 
             val arguments = Bundle().apply {
-                putString("FIRST_NAME", firstName)
-                putString("LAST_NAME", lastName)
+                putString(Constants.FIRST_NAME, firstName)
+                putString(Constants.LAST_NAME, lastName)
             }
 
             findNavController()

@@ -12,18 +12,7 @@ class MoviesAdapter(
 ) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
 
     class MovieViewHolder(private val binding: ItemMovieBinding, val onClick: (Movie) -> Unit) : RecyclerView.ViewHolder(binding.root) {
-        private var currentMovie: Movie? = null
-
-        init {
-            binding.root.setOnClickListener {
-                currentMovie?.let {
-                    onClick(it)
-                }
-            }
-        }
-
         fun bind(movie: Movie) {
-            currentMovie = movie
             binding.movieTitle.text = movie.title
             binding.movieRating.text = movie.rating.toString()
             binding.movieDescription.text = movie.description
@@ -31,6 +20,10 @@ class MoviesAdapter(
             Glide.with(itemView.context)
                 .load(movie.imageUrl)
                 .into(binding.movieImage)
+
+            binding.root.setOnClickListener {
+                onClick(movie)
+            }
         }
     }
 

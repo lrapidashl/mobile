@@ -9,6 +9,14 @@ import com.example.navigation.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment(R.layout.fragment_second)
 {
+    private object Constants {
+        const val FIRST_NAME = "FIRST_NAME"
+        const val LAST_NAME = "LAST_NAME"
+        const val YEAR = "YEAR"
+        const val MONTH = "MONTH"
+        const val DAY = "DAY"
+    }
+
     private lateinit var binding: FragmentSecondBinding
 
     @SuppressLint("SetTextI18n")
@@ -17,8 +25,8 @@ class SecondFragment : Fragment(R.layout.fragment_second)
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSecondBinding.bind(view)
 
-        val firstName = arguments?.getString("FIRST_NAME")
-        val lastName = arguments?.getString("LAST_NAME")
+        val firstName = arguments?.getString(Constants.FIRST_NAME)
+        val lastName = arguments?.getString(Constants.LAST_NAME)
 
         binding.name.text = "$firstName $lastName"
 
@@ -28,11 +36,11 @@ class SecondFragment : Fragment(R.layout.fragment_second)
             val day = binding.datePicker.dayOfMonth
 
             val arguments = Bundle().apply {
-                putInt("YEAR", year)
-                putInt("MONTH", month)
-                putInt("DAY", day)
-                putString("FIRST_NAME", firstName)
-                putString("LAST_NAME", lastName)
+                putInt(Constants.YEAR, year)
+                putInt(Constants.MONTH, month)
+                putInt(Constants.DAY, day)
+                putString(Constants.FIRST_NAME, firstName)
+                putString(Constants.LAST_NAME, lastName)
             }
 
             findNavController().navigate(R.id.action_secondFragment_to_thirdFragment, arguments)
